@@ -1,5 +1,18 @@
 /* Write your CSS here */
-.con8{
-    background-color:#0f172a;
-    
+.div3 {
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 900px;
+  border-radius: 10px;
+}
+
+.img5 {
+  height: 90px;
+  width: 90px;
+  margin-right: 130px;
+  margin-left: 100px;
 }

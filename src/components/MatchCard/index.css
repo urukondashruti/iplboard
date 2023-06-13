@@ -12,11 +12,12 @@
   align-items: center;
   background-color: #ffffff33;
   height: 200px;
-  width: 400px;
+  width: 550px;
   border-radius: 12px;
   border: 1px solid #ffffff;
   text-decoration: none;
   padding: 40px;
+  margin: 20px;
 }
 
 .para {

@@ -1,1 +1,31 @@
 /* Write your CSS here */
+.con8 {
+    list-style-type:none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f172a;
+  height: 300px;
+  width: 280px;
+  color: white;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.con10 {
+  color: green;
+}
+
+.con9 {
+  color: red;
+}
+.size4 {
+  height: 80px;
+  width: 80px;
+}
+
+.head {
+  width: 250px;
+  text-align: center;
+}

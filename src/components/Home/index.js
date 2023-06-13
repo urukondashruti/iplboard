@@ -1,11 +1,14 @@
 import {Component} from 'react'
 
+import Loader from 'react-loader-spinner'
+
 import Items from '../MatchCard'
 
 import './index.css'
 
 class Home extends Component {
   state = {
+    status: true,
     List1: [],
   }
 
@@ -22,26 +25,36 @@ class Home extends Component {
       name: each.name,
       teamImage: each.team_image_url,
     }))
-    this.setState({List1: formatedList})
+    this.setState({List1: formatedList, status: false})
   }
 
   render() {
-    const {List1} = this.state
+    const {status, List1} = this.state
     return (
-      <div className="backs">
-        <div className="con1">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
-            alt="ipl logo"
-            className="size"
-          />
-          <h1 className="head">IPLDashboard</h1>
+      <div>
+        <div className="backs">
+          {status ? (
+            <div testid="loader">
+              <Loader type="Oval" color="#ffffff" height={50} width={50} />
+            </div>
+          ) : (
+            <>
+              <div className="con1">
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
+                  alt="ipl logo"
+                  className="size"
+                />
+                <h1 className="head">IPL Dashboard</h1>
+              </div>
+              <ul className="UnList">
+                {List1.map(each => (
+                  <Items key={each.id} Item={each} />
+                ))}
+              </ul>
+            </>
+          )}
         </div>
-        <ul className="UnList">
-          {List1.map(each => (
-            <Items key={each.id} Item={each} />
-          ))}
-        </ul>
       </div>
     )
   }

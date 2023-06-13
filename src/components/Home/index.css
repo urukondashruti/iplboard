@@ -1,6 +1,11 @@
 .backs {
   background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
   background-size: cover;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .con1 {
@@ -20,6 +25,7 @@
 .size {
   height: 50px;
   width: 50px;
+  margin-top: 20px;
 }
 
 .head {
